@@ -1,0 +1,232 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{370EF7FC-D118-48B8-B7F7-EE22572099CD}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>UrnaEletronica</RootNamespace>
+    <AssemblyName>UrnaEletronica</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MaterialSkin, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialSkin.0.2.1\lib\MaterialSkin.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdminMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminMain.Designer.cs">
+      <DependentUpon>AdminMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Candidato\CandidatoCRUD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Candidato\CandidatoCRUD.Designer.cs">
+      <DependentUpon>CandidatoCRUD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Candidato\CandidatoUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Candidato\CandidatoUI.Designer.cs">
+      <DependentUpon>CandidatoUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EleicoesMain.cs" />
+    <Compile Include="EleicoesMain.Designer.cs">
+      <DependentUpon>EleicoesMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Eleicoes\DadosEleitorUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Eleicoes\DadosEleitorUI.Designer.cs">
+      <DependentUpon>DadosEleitorUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Eleicoes\PrefeitoUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Eleicoes\PrefeitoUI.Designer.cs">
+      <DependentUpon>PrefeitoUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Eleicoes\ResultadoUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Eleicoes\ResultadoUI.Designer.cs">
+      <DependentUpon>ResultadoUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Eleicoes\TituloEleitor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Eleicoes\TituloEleitor.Designer.cs">
+      <DependentUpon>TituloEleitor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Eleicoes\VereadorUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Eleicoes\VereadorUI.Designer.cs">
+      <DependentUpon>VereadorUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Eleitor\EleitorCRUD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Eleitor\EleitorCRUD.Designer.cs">
+      <DependentUpon>EleitorCRUD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Eleitor\EleitorUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Eleitor\EleitorUI.Designer.cs">
+      <DependentUpon>EleitorUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="File\StoreAndRead.cs" />
+    <Compile Include="File\VirtualBD.cs" />
+    <Compile Include="Model\Cadastravel.cs" />
+    <Compile Include="Model\Candidato.cs" />
+    <Compile Include="Partido\PartidoCrud.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Partido\PartidoCrud.Designer.cs">
+      <DependentUpon>PartidoCrud.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Partido\PartidoUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Partido\PartidoUI.Designer.cs">
+      <DependentUpon>PartidoUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TelaInicial.cs" />
+    <Compile Include="TelaInicial.Designer.cs">
+      <DependentUpon>TelaInicial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Eleitor.cs" />
+    <Compile Include="Model\Partido.cs" />
+    <Compile Include="Model\Prefeito.cs" />
+    <Compile Include="Model\Urna.cs" />
+    <Compile Include="Model\Vereador.cs" />
+    <Compile Include="Model\VicePrefeito.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Urna\UrnaCRUD.cs" />
+    <Compile Include="Urna\UrnaCRUD.Designer.cs">
+      <DependentUpon>UrnaCRUD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Urna\UrnaUI.cs" />
+    <Compile Include="Urna\UrnaUI.Designer.cs">
+      <DependentUpon>UrnaUI.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AdminMain.resx">
+      <DependentUpon>AdminMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Candidato\CandidatoCRUD.resx">
+      <DependentUpon>CandidatoCRUD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Candidato\CandidatoUI.resx">
+      <DependentUpon>CandidatoUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EleicoesMain.resx">
+      <DependentUpon>EleicoesMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Eleicoes\DadosEleitorUI.resx">
+      <DependentUpon>DadosEleitorUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Eleicoes\PrefeitoUI.resx">
+      <DependentUpon>PrefeitoUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Eleicoes\ResultadoUI.resx">
+      <DependentUpon>ResultadoUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Eleicoes\TituloEleitor.resx">
+      <DependentUpon>TituloEleitor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Eleicoes\VereadorUI.resx">
+      <DependentUpon>VereadorUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Eleitor\EleitorCRUD.resx">
+      <DependentUpon>EleitorCRUD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Eleitor\EleitorUI.resx">
+      <DependentUpon>EleitorUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Partido\PartidoCrud.resx">
+      <DependentUpon>PartidoCrud.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Partido\PartidoUI.resx">
+      <DependentUpon>PartidoUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TelaInicial.resx">
+      <DependentUpon>TelaInicial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Urna\UrnaCRUD.resx">
+      <DependentUpon>UrnaCRUD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Urna\UrnaUI.resx">
+      <DependentUpon>UrnaUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
